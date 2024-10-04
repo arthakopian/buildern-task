@@ -8,16 +8,15 @@ generator client {
 }
 
 model Teacher {
-  id        Int      @id @default(autoincrement())
-  name      String
-  subjects  Subject[]
+  id       Int       @id @default(autoincrement())
+  name     String
 }
 
 model Pupil {
-  id        Int      @id @default(autoincrement())
+  id        Int       @id @default(autoincrement())
   name      String
   grade     String
-  subjects  Subject[]
+  subjects  Subject[] @relation("PupilSubjects")
 }
 
 model Subject {
@@ -25,7 +24,6 @@ model Subject {
   name      String
   teacherId Int?
   teacher   Teacher? @relation(fields: [teacherId], references: [id])
-  pupils    Pupil[]
 }
 
 model User {
