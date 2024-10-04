@@ -2,12 +2,9 @@ import * as React from 'react';
 import {
   Box,
   IconButton,
-  TextField,
   Tooltip,
-  useMediaQuery,
 } from '@mui/material';
-import { createTheme, useTheme } from '@mui/material/styles';
-import SearchIcon from '@mui/icons-material/Search';
+import { createTheme } from '@mui/material/styles';
 import SubjectIcon from '@mui/icons-material/Subject';
 import SchoolIcon from '@mui/icons-material/School';
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
